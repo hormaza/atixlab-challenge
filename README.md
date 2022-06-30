@@ -6,10 +6,6 @@ This is a nice challenge for [AtixLabs](https://www.linkedin.com/company/atix-la
 
 In this project we created a webapp where is possible to upload PNG files and Sheet files. We will have two pages to see your uploaded files. And best part: It's all serverless!
 
-## Warning
-
-If you refresh your browser you will lost your files because it's all in cache.
-
 ## Requirements
 
 We just need [Node.js](https://nodejs.org) to run this project.\
