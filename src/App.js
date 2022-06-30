@@ -13,7 +13,7 @@ function App() {
           <nav>
             <Link to="/home">Home</Link>
             <Link to="/images">Gallery</Link>
-            <Link to="/sheets">Gallery</Link>
+            <Link to="/sheets">Sheets</Link>
           </nav>
           <Routes>
             <Route exact path="/home" element={<Home />} />
