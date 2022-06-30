@@ -2,6 +2,10 @@ import "./App.css";
 
 import { Link, Route, Routes } from "react-router-dom";
 
+import Gallery from "./components/Gallery";
+import Home from "./components/Home";
+import Sheets from "./components/Sheets";
+
 function App() {
   return (
     <>
@@ -35,31 +39,6 @@ function App() {
         </footer>
       </div>
     </>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <input type="file" accept=".png, .csv" />
-      <button>Upload File</button>
-    </div>
-  );
-}
-
-function Gallery() {
-  return (
-    <div>
-      <div>Gallery Section</div>
-    </div>
-  );
-}
-
-function Sheets() {
-  return (
-    <div>
-      <div>Sheets Section</div>
-    </div>
   );
 }
 
