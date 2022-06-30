@@ -9,16 +9,18 @@ function App() {
         <header>
           <h1>Welcome to ATIXLABS Challenge!</h1>
         </header>
-        <nav>
-          <Link to="/home">Home</Link>
-          <Link to="/images">Gallery</Link>
-          <Link to="/sheets">Gallery</Link>
-        </nav>
-        <Routes>
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/images" element={<Gallery />} />
-          <Route exact path="/sheets" element={<Sheets />} />
-        </Routes>
+        <main>
+          <nav>
+            <Link to="/home">Home</Link>
+            <Link to="/images">Gallery</Link>
+            <Link to="/sheets">Gallery</Link>
+          </nav>
+          <Routes>
+            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/images" element={<Gallery />} />
+            <Route exact path="/sheets" element={<Sheets />} />
+          </Routes>
+        </main>
         <footer>
           <p>
             This exercise was made by{" "}
@@ -39,6 +41,7 @@ function App() {
 function Home() {
   return (
     <div>
+      <input type="file" accept=".png, .csv" />
       <button>Upload File</button>
     </div>
   );
