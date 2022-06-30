@@ -1,23 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+      <div className="App">
+        <header>
+          <h1>Welcome to ATIXLABS Challenge!</h1>
+        </header>
+        <nav>
+          <Link to="/home">Home</Link>
+          <Link to="/images">Gallery</Link>
+          <Link to="/sheets">Gallery</Link>
+        </nav>
+        <Routes>
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/images" element={<Gallery />} />
+          <Route exact path="/sheets" element={<Sheets />} />
+        </Routes>
+        <footer>
+          <p>
+            This exercise was made by{" "}
+            <a
+              href="//www.matias.hormaza.com.ar"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Matias Hormaza
+            </a>
+          </p>
+        </footer>
+      </div>
+    </>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      <button>Upload File</button>
+    </div>
+  );
+}
+
+function Gallery() {
+  return (
+    <div>
+      <div>Gallery Section</div>
+    </div>
+  );
+}
+
+function Sheets() {
+  return (
+    <div>
+      <div>Sheets Section</div>
     </div>
   );
 }
