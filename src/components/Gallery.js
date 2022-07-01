@@ -39,7 +39,12 @@ function Gallery() {
             <div className="closeButton" onClick={closeModal}>
               x
             </div>
-            <img id="modalImg" width="100%" src={modalImgSource} />
+            <img
+              alt="preview"
+              id="modalImg"
+              width="100%"
+              src={modalImgSource}
+            />
           </div>
         </div>
       )}
