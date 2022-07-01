@@ -60,7 +60,7 @@ function Sheets() {
             );
           })
         ) : (
-          <h2>No sheets found in memory.</h2>
+          <h3>No sheets found in memory.</h3>
         )}
       </div>
     </div>
