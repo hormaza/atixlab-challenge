@@ -2,6 +2,7 @@ import React from "react";
 
 function Home() {
   const [isFileLoaded, setIsFileLoaded] = React.useState(false);
+  const [isFileSelected, setIsFileSelected] = React.useState(false);
 
   const onClickHandler = function () {
     // Looking for the file
@@ -58,18 +59,33 @@ function Home() {
   };
 
   return (
-    <div>
+    <div id="Home">
       {isFileLoaded ? (
         <>
-          <h1>File Loaded. Thanks</h1>
+          <h2>File Loaded. Thanks</h2>
           <button onClick={() => setIsFileLoaded(false)}>
             Upload another file
           </button>
         </>
       ) : (
         <>
-          <input id="inputElement" type="file" accept=".png, .csv" />
-          <button onClick={onClickHandler}>Upload File</button>
+          <h2>Upload a File (only .png or .csv)</h2>
+          <div className="uploadFile">
+            <label id="selectFileLabel" htmlFor="inputElement">
+              Drag your files here or click in this area.
+            </label>
+            <input
+              id="inputElement"
+              name="inputElement"
+              aria-labelledby="selectFileLabel"
+              type="file"
+              accept=".png, .csv"
+              onChange={() => setIsFileSelected(true)}
+            />
+          </div>
+          {isFileSelected && (
+            <button onClick={onClickHandler}>Upload File</button>
+          )}
         </>
       )}
     </div>
