@@ -107,3 +107,26 @@ td {
 #Sheets .table-container.expanded {
   max-height: 500px;
 }
+
+/* footer Section */
+
+footer {
+  background-color: #222;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: yellow;
+}
