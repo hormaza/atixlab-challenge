@@ -16,3 +16,11 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
+#Sheets .container {
+  width: 100%;
+}
+
+#Sheets table {
+  width: 100%;
+}

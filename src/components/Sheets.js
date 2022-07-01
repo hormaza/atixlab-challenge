@@ -18,7 +18,7 @@ function Sheets() {
   return (
     <div id="Sheets">
       <h2>Sheets Section</h2>
-      <div>
+      <div className="container">
         {!!sheets.length ? (
           sheets.map(parseCSV).map((csv, i) => {
             return (
