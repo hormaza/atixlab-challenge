@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 
 import Gallery from "./components/Gallery";
 import Home from "./components/Home";
@@ -15,15 +15,19 @@ function App() {
         </header>
         <main>
           <nav>
-            <Link to="/home">Home</Link>
-            <Link to="/images">Gallery</Link>
-            <Link to="/sheets">Sheets</Link>
+            <div className="nav-container">
+              <NavLink to="/home">Home</NavLink>
+              <NavLink to="/images">Gallery</NavLink>
+              <NavLink to="/sheets">Sheets</NavLink>
+            </div>
           </nav>
-          <Routes>
-            <Route exact path="/home" element={<Home />} />
-            <Route exact path="/images" element={<Gallery />} />
-            <Route exact path="/sheets" element={<Sheets />} />
-          </Routes>
+          <div className="content">
+            <Routes>
+              <Route exact path="/home" element={<Home />} />
+              <Route exact path="/images" element={<Gallery />} />
+              <Route exact path="/sheets" element={<Sheets />} />
+            </Routes>
+          </div>
         </main>
         <footer>
           <p>
