@@ -19,8 +19,22 @@ td {
 
 #Sheets .container {
   width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #Sheets table {
   width: 100%;
+}
+
+#Sheets .table-container {
+  overflow: scroll;
+  max-height: 0px;
+  transition: max-height .5s;
+}
+
+#Sheets .table-container.expanded {
+  max-height: 500px;
 }
