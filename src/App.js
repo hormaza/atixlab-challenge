@@ -1,12 +1,19 @@
 import "./App.css";
 
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 
 import Gallery from "./components/Gallery";
 import Home from "./components/Home";
 import Sheets from "./components/Sheets";
 
 function App() {
+  const navigate = useNavigate();
+
+  function removeFiles() {
+    localStorage.clear();
+    alert("LocalStorage cleared.");
+    navigate("/home");
+  }
   return (
     <>
       <div className="App">
@@ -28,6 +35,9 @@ function App() {
               <Route exact path="/sheets" element={<Sheets />} />
             </Routes>
           </div>
+          <button className="clearButton" onClick={removeFiles}>
+            Click here to clear LocalStorage
+          </button>
         </main>
         <footer>
           <p>
