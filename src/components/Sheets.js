@@ -16,34 +16,36 @@ function Sheets() {
     return { header: headerValues, body: bodyValues };
   }
   return (
-    <div>
-      <div>Sheets Section</div>
-      {!!sheets.length ? (
-        sheets.map(parseCSV).map((csv, i) => {
-          return (
-            <table key={"sheet_" + i}>
-              <thead>
-                <tr>
-                  {csv.header.map((value, i) => (
-                    <th key={value + i}>{value}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {csv.body.map((row, i) => (
-                  <tr key={"row_" + i}>
-                    {row.map((value, i) => (
-                      <td key={value + i}>{value}</td>
+    <div id="Sheets">
+      <h2>Sheets Section</h2>
+      <div>
+        {!!sheets.length ? (
+          sheets.map(parseCSV).map((csv, i) => {
+            return (
+              <table key={"sheet_" + i}>
+                <thead>
+                  <tr>
+                    {csv.header.map((value, i) => (
+                      <th key={value + i}>{value}</th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          );
-        })
-      ) : (
-        <h2>No sheets found in memory.</h2>
-      )}
+                </thead>
+                <tbody>
+                  {csv.body.map((row, i) => (
+                    <tr key={"row_" + i}>
+                      {row.map((value, i) => (
+                        <td key={value + i}>{value}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            );
+          })
+        ) : (
+          <h2>No sheets found in memory.</h2>
+        )}
+      </div>
     </div>
   );
 }
