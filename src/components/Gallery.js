@@ -9,7 +9,7 @@ function Gallery() {
           <img alt={"Image number " + i} key={"image_" + i} src={img} />
         ))
       ) : (
-        <h1>No images found in gallery.</h1>
+        <h2>No images found in gallery.</h2>
       )}
     </div>
   );
