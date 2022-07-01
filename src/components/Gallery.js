@@ -1,9 +1,14 @@
 import React from "react";
 
 function Gallery() {
+  const images = JSON.parse(localStorage.getItem("images") || "[]");
   return (
     <div>
-      <div>Gallery Section</div>
+      {!!images.length ? (
+        images.map((img, i) => <img key={"image_" + i} src={img} />)
+      ) : (
+        <h1>No images found in gallery.</h1>
+      )}
     </div>
   );
 }
